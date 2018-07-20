@@ -1,0 +1,7 @@
+-r base.txt
+
+mock==2.0.0
+tox==3.1.2
+pytest==3.6.3
+pytest-runner==4.2
+
