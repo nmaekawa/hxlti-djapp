@@ -27,7 +27,7 @@ hxlti requires a redis instance running, and by default it will look for
    create a consumer (you will need the `Admin` app enabled)
 
 5. configure your lti consumer with the created consumer keys in the previous
-   step, and use the launch url `http://127.0.0.1:8000/lti/lti_launch/`
+   step, and use the launch url `http://127.0.0.1:8000/lti/launch/`
 
 
 other configs
