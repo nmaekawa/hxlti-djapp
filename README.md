@@ -36,8 +36,9 @@ other configs
 some other settings for hxlti:
 
     # hxlti app settings
+    HXLTI_ENFORCE_SSL = True  # check if request protocol is https, default is false
     HXLTI_DUMMY_CONSUMER_KEY = os.environ.get('HXLTI_DUMMY_CONSUMER_KEY', 'dummy')
-    REDIS_URL = os.environ.get('REDIS_URL', 'redis://localhost:6379/0')
+    HXLTI_REDIS_URL = os.environ.get('REDIS_URL', 'redis://localhost:6379/0')
 
 
 

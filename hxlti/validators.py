@@ -19,7 +19,7 @@ class LTIRequestValidator(RequestValidator):
 
     @property
     def enforce_ssl(self):
-        return False
+        return getattr(settings, 'HXLTI_ENFORCE_SSL', False)
 
     @property
     def dummy_client(self):
@@ -54,7 +54,7 @@ class LTIRequestValidator(RequestValidator):
         request, request_token=None, access_token=None):
 
         try:
-            r = redis.from_url(settings.REDIS_URL)
+            r = redis.from_url(settings.HXLTI_REDIS_URL)
             r.ping()
         except redis.ConnectionError as e:
             raise ImproperlyConfigured("redis connect failure: " + str(e))
