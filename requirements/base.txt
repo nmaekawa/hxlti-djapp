@@ -1,8 +1,8 @@
-Django==2.0.7
+Django==2.2.1
 
 django-model-utils==3.1.2
 
-lti==0.9.3
-oauthlib==2.1.0
-redis==2.10.6
+lti==0.9.4
+oauthlib==3.0.1
+redis==3.2.1
 
