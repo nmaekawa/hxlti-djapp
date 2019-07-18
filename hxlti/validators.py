@@ -57,7 +57,9 @@ class LTIRequestValidator(RequestValidator):
             r = redis.from_url(settings.HXLTI_REDIS_URL)
             r.ping()
         except redis.ConnectionError as e:
-            raise ImproperlyConfigured("redis connect failure: " + str(e))
+            log.debug("redis connect failure({}): {}".format(
+                settings.HXLTI_REDIS_URL, e))
+            raise
 
         exists = r.getset('hxlti_nonce:' + nonce, timestamp)
         if exists:
