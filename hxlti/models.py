@@ -21,7 +21,6 @@ class Consumer(Model):
     secret_key = CharField(max_length=128, default=generate_id)
     expire_on = DateTimeField(default=expire_in_weeks)
 
-
     def has_expired(self, now=None):
         if now is None:
             now = datetime.now(pytz.utc)
@@ -32,7 +31,3 @@ class Consumer(Model):
 
     def __str__(self):
         return self.__repr__()
-
-
-
-

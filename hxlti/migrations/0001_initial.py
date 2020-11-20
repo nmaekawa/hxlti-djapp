@@ -8,18 +8,31 @@ class Migration(migrations.Migration):
 
     initial = True
 
-    dependencies = [
-    ]
+    dependencies = []
 
     operations = [
         migrations.CreateModel(
-            name='Consumer',
+            name="Consumer",
             fields=[
-                ('created', models.DateTimeField(auto_now_add=True)),
-                ('modified', models.DateTimeField(auto_now=True)),
-                ('consumer', models.CharField(default=hxlti.models.generate_id, max_length=128, primary_key=True, serialize=False)),
-                ('secret_key', models.CharField(default=hxlti.models.generate_id, max_length=128)),
-                ('expire_on', models.DateTimeField(default=hxlti.models.expire_in_weeks)),
+                ("created", models.DateTimeField(auto_now_add=True)),
+                ("modified", models.DateTimeField(auto_now=True)),
+                (
+                    "consumer",
+                    models.CharField(
+                        default=hxlti.models.generate_id,
+                        max_length=128,
+                        primary_key=True,
+                        serialize=False,
+                    ),
+                ),
+                (
+                    "secret_key",
+                    models.CharField(default=hxlti.models.generate_id, max_length=128),
+                ),
+                (
+                    "expire_on",
+                    models.DateTimeField(default=hxlti.models.expire_in_weeks),
+                ),
             ],
         ),
     ]
