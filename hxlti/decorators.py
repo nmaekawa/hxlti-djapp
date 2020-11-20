@@ -1,11 +1,9 @@
 
+import logging
 from functools import wraps
 
-import logging
-
+from django.http import HttpResponseBadRequest, HttpResponseForbidden
 from lti.contrib.django import DjangoToolProvider
-from django.http import HttpResponseBadRequest
-from django.http import HttpResponseForbidden
 
 from .validators import LTIRequestValidator
 

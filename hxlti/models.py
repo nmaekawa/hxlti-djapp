@@ -1,13 +1,9 @@
 import logging
-from datetime import datetime
-from datetime import timedelta
-import pytz
+from datetime import datetime, timedelta
 from uuid import uuid4
 
-from django.db.models import CharField
-from django.db.models import DateTimeField
-from django.db.models import Model
-
+import pytz
+from django.db.models import CharField, DateTimeField, Model
 
 
 def expire_in_weeks(ttl=24):

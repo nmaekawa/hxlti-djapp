@@ -1,8 +1,7 @@
 import os
 import re
-from setuptools import setup
-from setuptools import find_packages
 
+from setuptools import find_packages, setup
 
 app_name='hxlti'
 project_name='{}-djapp'.format(app_name)

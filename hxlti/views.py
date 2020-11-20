@@ -7,6 +7,7 @@ from django.views.decorators.csrf import csrf_exempt
 
 from .decorators import require_lti_launch
 
+
 @csrf_exempt
 @xframe_options_exempt  # allows rendering in Canvas|edx frame
 @require_lti_launch
